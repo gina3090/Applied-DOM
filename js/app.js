@@ -13,8 +13,7 @@
    */
   function setMyLightGreen() {
     var lightId = this.dataset.lightId;
-    var lightGreen = document.getElementById(lightId);
-    lightGreen.className = 'light-green';
+    document.getElementById(lightId).className = 'light-green';
   }
 
   /*
@@ -30,8 +29,7 @@
    */
   function setMyLightClass(event, desiredClass) {
     var lightId = this.dataset.lightId;
-    var lightClass = document.getElementById(lightId);
-    lightClass.className = desiredClass;
+    document.getElementById(lightId).className = desiredClass;
   }
 
   /*
@@ -74,7 +72,7 @@
    * using the Function prototype method: apply
    * to set the context to the correct object
    */
-  btn2.addEventListener('click', (event) => {
+  btn2.addEventListener('click', () => {
     setMyLightGreen.apply(btn2);
   });
 
@@ -132,8 +130,10 @@
    * using the Function prototype method: call
    * to set the context to the correct object
    */
-
-
+  btn7.addEventListener('click', () => {
+    setMyLightGreen.call(btn7);
+  });
+  
   /*
    * Add a click event listener to btn8
    * the handler method will be an anonymous function expression
