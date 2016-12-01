@@ -74,7 +74,9 @@
    * using the Function prototype method: apply
    * to set the context to the correct object
    */
-
+  btn2.addEventListener('click', (event) => {
+    setMyLightGreen.apply(btn2);
+  });
 
   /*
    * Add a click event listener to btn3
